@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>Carte Couleur</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    
+    <body>
+        <div id="wrapper-carte">
+            <div id="R" class="channel">
+                <canvas id="r-canvas" class="curve-canvas"></canvas>
+            </div>
+
+    
+            <div id="G" class="channel">
+                <canvas id="g-canvas" class="curve-canvas"></canvas>
+            </div>
+
+    
+            <div id="B" class="channel">
+                <canvas id="b-canvas" class="curve-canvas"></canvas>
+            </div>
+
+            
+            <div id="carte">
+                <canvas id="map-canvas"></canvas>
+            </div>
+            
+            <div id="sub-wrapper-generation">
+                <div>
+                    <label for="input-map-size" style="color: aliceblue;">Map Size:</label>
+                    <input type="number" id="input-map-size" name="input-map-size" min="2" max="500" step="5" value="10">
+                </div>
+                <button id="button-checkpoint" type="button">Enable Checkpoint Positioning</button>
+                <button id="button-test" type="button">Generate Test Gradient</button>
+                <button id="button-clear-r" type="button">Clear the channel red</button>
+                <button id="button-clear-g" type="button">Clear the channel green</button>
+                <button id="button-clear-b" type="button">Clear the channel blue</button>
+            </div>
+                
+            <div id="sub-wrapper-export">
+                <label for="map-filename">File name:</label>
+                <input type="text" id="map-filename" name="map-filename" value="color_map">
+                <button id="button-export" type="button">Export Map as PNG</button>
+            </div>
+            
+        </div>
+
+        <canvas id="test-canvas"></canvas>
+
+    </body>
+    
+    <!-- Script -->
+    <script src="RGBColor.js"></script>
+    <script src="Checkpoint.js"></script>
+    <script src="DeCasteljau.js"></script>
+    <script src="BSplines.js"></script>
+    <script src="Channel.js"></script>
+    <script src="ColorMap.js"></script>
+    <script src="ChannelView.js"></script>
+    <script src="ColorMapView.js"></script>
+    <script src="ColorMapController.js"></script>
+    <script src="ChannelController.js"></script>
+    
+    <script src="Tests/color_map_tests.js"></script>
+    
+    <script src="Main.js"></script>
+    
+</html> 
